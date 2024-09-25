@@ -1,0 +1,13 @@
+services:
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    ports:
+      - "9000:9000"
+    volumes:
+      - ~/clickhouse-data:/var/lib/clickhouse                             # Pour la persistance des données
+      - ./Clickhouse/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql  # Pour l'initialisation de la DB
+      - ./Clickhouse/users.xml:/etc/clickhouse-server/users.d/users.xml   # Pour la configuration de l'utilisateur
+
+  # backend:
+  #   image: golang:1.23.1-alpine3.20

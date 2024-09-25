@@ -1,0 +1,14 @@
+<!-- users.xml -->
+
+<yandex>
+    <users>
+        <psykalytics>
+            <password>psykalytics</password>
+            <profile>default</profile>
+            <networks>
+                <ip>::/0</ip> <!-- Permet l'accès depuis n'importe quelle IP -->
+            </networks>
+            <quota>default</quota>
+        </psykalytics>
+    </users>
+</yandex>
